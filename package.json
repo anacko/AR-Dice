@@ -1,0 +1,22 @@
+{
+  "name": "2201-ar-dice",
+  "version": "1.0.0",
+  "description": "A simple page to show dice with AR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anacko/AR-Dice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anacko/AR-Dice/issues"
+  },
+  "homepage": "https://github.com/anacko/AR-Dice#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
