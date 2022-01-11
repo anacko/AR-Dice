@@ -7,9 +7,13 @@
   <title>Roll me!</title>
 </head>
 <body>
-  <a href='/main'>Click to go to main.</a>
   <p> Here you show the marker.</p>
   <iframe src="/main" width="500" height="400"></iframe>
-   
+  <% if (d6Value === '0' || !d6Value) { %> 
+    <form action="/new_d6" method="POST"><button onclick="">Roll!</button></form>
+  <% } else { %> 
+    <p>You rolled number <%= d6Value %>! </p>
+    <form action="/reset_d6" method="POST"><button onclick="">Reset</button></form>
+  <% } %> 
 </body>
 </html>
