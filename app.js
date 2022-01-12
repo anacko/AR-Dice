@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
 })
 
 app.get('/main', (req, res) => {
-  console.log("Cookies: ", req.cookies)
   res.render('main.ejs')
 })
 
@@ -26,8 +25,8 @@ app.get('/models/d6', (req, res) => {
 })
 
 app.post('/new_d6', (req, res) => {
-  const newVal = Math.floor(Math.random()*6 + 1)
-  res.cookie('d6-value', newVal)
+  const newD6 = Math.floor(Math.random()*6 + 1)
+  res.cookie('d6-value', newD6)
   res.redirect('/')
 })
 
