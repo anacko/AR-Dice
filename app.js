@@ -9,15 +9,15 @@ app.set('view engine', 'html');
 app.use(cookieParser())
 
 app.get('/', (req, res) => {
-  if (!req.cookies['d6-value']) {
-    res.cookie('d6-value', '0')
-  }
+  if (!req.cookies['d6-value']) { res.cookie('d6-value', '0') }
   const templateVars = { d6Value: req.cookies['d6-value'] }
   res.render('index.ejs', templateVars)
 })
 
 app.get('/main', (req, res) => {
-  res.render('main.ejs')
+  if (!req.cookies['d6-value']) { res.cookie('d6-value', '0') }
+  const templateVars = { d6Value: req.cookies['d6-value'] }
+  res.render('main.ejs', templateVars)
 })
 
 app.get('/models/d6', (req, res) => {
