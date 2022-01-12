@@ -1,7 +1,8 @@
 const express = require('express')
 const cookieParser = require('cookie-parser')
+require('dotenv').config()
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
@@ -21,7 +22,7 @@ app.get('/main', (req, res) => {
 })
 
 app.get('/models/d6', (req, res) => {
-  res.sendFile(`./models/_${req.cookies['d6-value']}-d6.glb`, {root: '/home/anack/Ubuntu-projects/2201-AR-Dice'})
+  res.sendFile(`./models/_${req.cookies['d6-value']}-d6.glb`, {root: process.env.ROOT})
 })
 
 app.post('/new_d6', (req, res) => {
