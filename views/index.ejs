@@ -4,20 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.css"/>
+  <link rel="stylesheet" href="index.css"/>
   <title>Roll me!</title>
 </head>
 <body>
+  <div class="all">
   <h2 class="title">D6 Roll</h2>
-  <h3 class="instructions">Show the marker and see your roll</h3>
-  <iframe class="camera" src="/main" width="500" height="400"></iframe>
-  <div class="results">
+
+  <% if (d6Value === '0' || !d6Value) { %>
+    <h3 class="instructions">Show the Kanji marker and Roll the die!</h3>
+  <% } else { %> 
+    <h3 class="instructions">Show the Kanji marker and Check your roll!</h3>
+  <% } %> 
+  <iframe class="camera" scrolling="no" src="/main"></iframe>
   <% if (d6Value === '0' || !d6Value) { %>
     <form action="/new_d6" method="POST"><button onclick="">Roll!</button></form>
   <% } else { %> 
-    <p>You rolled number <%= d6Value %>! </p>
+    <h3 class="results">You rolled number <%= d6Value %>! </h3>
     <form action="/reset_d6" method="POST"><button onclick="">Reset</button></form>
   <% } %> 
-  </div>
+</div>
 </body>
 </html>

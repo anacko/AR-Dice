@@ -6,6 +6,7 @@ const port = process.env.PORT || 3000
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+app.use(express.static('public'));
 
 app.use(cookieParser())
 

@@ -1,0 +1,31 @@
+* {
+  background-color: plum;
+}
+
+.all {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.title {
+  color: red;
+}
+
+.results {
+  color: blue;
+}
+
+.camera {
+  width: 75vw;
+  height: 50vh;
+  scrollbar-width: none;
+}
+
+button {
+  width: 100px;
+  text-align: center;
+  background-color: pink;
+  margin: 1.5em;
+  padding: 1.5em;
+}
