@@ -1,31 +1,30 @@
-* {
-  background-color: plum;
-}
-
 .all {
+  background: linear-gradient(to bottom, #163C52 0%,#4F4F47 30%,#C5752D 60%,#B7490F 80%, #2F1107 100%);
   display: flex;
   flex-flow: column;
   align-items: center;
-}
-
-.title {
-  color: red;
-}
-
-.results {
-  color: blue;
+  justify-content: space-between;
+  color: whitesmoke;
 }
 
 .camera {
-  width: 75vw;
-  height: 50vh;
+  width: min(50vw, 50vh);
+  height: min(50vw, 50vh);
   scrollbar-width: none;
+  border-radius: 50%;
+}
+
+.buttons {
+  width: min(50vw, 50vh);
+  display: flex;
+  justify-content: space-between;
 }
 
 button {
-  width: 100px;
   text-align: center;
-  background-color: pink;
+  background-color: #B7490F;
   margin: 1.5em;
   padding: 1.5em;
+  border-radius: 10px;
+  color: white;
 }
