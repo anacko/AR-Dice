@@ -21,3 +21,5 @@ Depending on the value of the cookie, a different model is rendered, showing the
 ## Source
 The 3d model, and each if its views, is from MS 3D Library models (Die 6-Sided 16mm).
 ![faces](https://github.com/anacko/AR-Dice/tree/main/images/d6-roll_imgs.png)
+
+Background by ![Billy](https://codepen.io/billyysea/pen/whjbK)
