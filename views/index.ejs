@@ -15,13 +15,15 @@
     <h3 class="instructions">Show the Kanji marker and Check your roll!</h3>
   <% } %> 
   <iframe class="camera" scrolling="no" src="/main"></iframe>
-  <div class="buttons">
   <% if (d6Value === '0' || !d6Value) { %>
-    <form action="/new_d6" method="POST"><button onclick="">Roll!</button></form>
+    <div class="buttons-single">
+      <form action="/new_d6" method="POST"><button onclick="">Roll!</button></form>
+    </div>
   <% } else { %> 
-    <form action="/new_d6" method="POST"><button onclick="">Roll Again!</button></form>
-    <form action="/reset_d6" method="POST"><button onclick="">Reset</button></form>
-    <% } %> 
-  </div>
+    <div class="buttons-double">
+      <form action="/new_d6" method="POST"><button onclick="">Roll Again!</button></form>
+      <form action="/reset_d6" method="POST"><button onclick="">Reset</button></form>
+    </div>
+          <% } %> 
 </body>
 </html>
