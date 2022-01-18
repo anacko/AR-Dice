@@ -14,10 +14,15 @@
   border-radius: 50%;
 }
 
-.buttons {
+.buttons-double {
   width: min(50vw, 50vh);
   display: flex;
   justify-content: space-between;
+}
+.buttons-single {
+  width: min(50vw, 50vh);
+  display: flex;
+  justify-content: center;
 }
 
 button {
