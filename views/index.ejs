@@ -16,13 +16,13 @@
   <% } %> 
   <iframe class="camera" scrolling="no" src="/main"></iframe>
   <% if (d6Value === '0' || !d6Value) { %>
-    <div class="buttons-single">
-      <form action="/new_d6" method="POST"><button onclick="">Roll!</button></form>
+    <div class="buttons">
+      <form action="/new_d6" method="POST"><button id="roll-first-button" onclick=""><h3>Roll!</h3></button></form>
     </div>
   <% } else { %> 
-    <div class="buttons-double">
-      <form action="/new_d6" method="POST"><button onclick="">Roll Again!</button></form>
-      <form action="/reset_d6" method="POST"><button onclick="">Reset</button></form>
+    <div class="buttons">
+      <form action="/new_d6" method="POST"><button id="roll-again-button" onclick=""><h3>Roll Again!</h3></button></form>
+      <form action="/reset_d6" method="POST"><button id="reset-roll-button" onclick=""><h3>Reset</h3></button></form>
     </div>
           <% } %> 
 </body>
