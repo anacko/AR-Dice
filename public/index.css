@@ -25,9 +25,12 @@ button {
   background-color: #B7490F;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
-  padding: 1.5em;
   color: white;
   width: min(25vw, 25vh);
+}
+
+#roll-first-button {
+  border-radius: 10px;
 }
 #roll-again-button {
   border-top-left-radius: 10px;
