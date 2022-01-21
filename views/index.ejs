@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css"/>
   <title>Roll me!</title>
 </head>
+<<<<<<< HEAD
 <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script src="roll.js"></script>
 <body>
@@ -14,5 +16,25 @@
   <div id="result"></div>
   <form id="roll" action="/" method="POST"><button onclick="">Roll!</button></form>
   <form id="reset" action="/" method="POST"><button onclick="">Reset</button></form>
+=======
+<body class="all">
+  <h2 class="title">D6 Roll</h2>
+  <% if (d6Value === '0' || !d6Value) { %>
+    <h3 class="instructions">Show the Kanji marker and Roll the die!</h3>
+  <% } else { %> 
+    <h3 class="instructions">Show the Kanji marker and Check your roll!</h3>
+  <% } %> 
+  <iframe class="camera" scrolling="no" src="/main"></iframe>
+  <% if (d6Value === '0' || !d6Value) { %>
+    <div class="buttons">
+      <form action="/new_d6" method="POST"><button id="roll-first-button" onclick=""><h3>Roll!</h3></button></form>
+    </div>
+  <% } else { %> 
+    <div class="buttons">
+      <form action="/new_d6" method="POST"><button id="roll-again-button" onclick=""><h3>Roll Again!</h3></button></form>
+      <form action="/reset_d6" method="POST"><button id="reset-roll-button" onclick=""><h3>Reset</h3></button></form>
+    </div>
+          <% } %> 
+>>>>>>> main
 </body>
 </html>

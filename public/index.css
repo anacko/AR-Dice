@@ -1,0 +1,43 @@
+.all {
+  background: linear-gradient(to bottom, #163C52 0%,#4F4F47 20%,#C5752D 50%,#B7490F 60%, #2F1107 90%, #163C52 100% );
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  color: whitesmoke;
+}
+
+.camera {
+  width: min(50vw, 50vh);
+  height: min(50vw, 50vh);
+  scrollbar-width: none;
+  border-radius: 50%;
+}
+
+.buttons {
+  width: min(50vw, 50vh);
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  text-align: center;
+  background-color: #B7490F;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  color: white;
+  width: min(25vw, 25vh);
+}
+
+#roll-first-button {
+  border-radius: 10px;
+}
+#roll-again-button {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#reset-roll-button {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

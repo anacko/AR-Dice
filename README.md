@@ -26,4 +26,7 @@ Other dependencies, as listed in `index.ejs` and `main.ejs` files:
 
 ## Source
 The 3d model, and each if its views, is from MS 3D Library models (Die 6-Sided 16mm).
+
 ![faces](https://github.com/anacko/AR-Dice/blob/main/images/d6-roll_imgs.png)
+
+Background by [Billy](https://codepen.io/billyysea/pen/whjbK)
