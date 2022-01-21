@@ -10,24 +10,24 @@ require('dotenv').config()
 const port = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
-  if (!req.cookies['d6-value']) { res.cookie('d6-value', '0') }
-  const templateVars = { d6Value: req.cookies['d6-value'] }
+  if (!req.cookies['d6_value']) { res.cookie('d6_value', '0') }
+  const templateVars = { d6Value: req.cookies['d6_value'] }
   res.render('index.ejs', templateVars)
 })
 
 app.get('/main', (req, res) => {
-  if (!req.cookies['d6-value']) { res.cookie('d6-value', '0') }
-  const templateVars = { d6Value: req.cookies['d6-value'] }
+  if (!req.cookies['d6_value']) { res.cookie('d6_value', '0') }
+  const templateVars = { d6Value: req.cookies['d6_value'] }
   res.render('main.ejs', templateVars)
 })
 
 app.get('/models/d6', (req, res) => {
-  res.sendFile(`./models/_${req.cookies['d6-value']}-d6.glb`, {root: process.env.ROOT})
+  res.sendFile(`./models/_${req.cookies['d6_value']}-d6.glb`, {root: process.env.ROOT})
 })
 
 app.post('/', (req, res) => {
-  if (!req.cookies['d6-value']) { res.cookie('d6-value', '0') }
-  const templateVars = { d6Value: req.cookies['d6-value'] }
+  if (!req.cookies['d6_value']) { res.cookie('d6_value', '0') }
+  const templateVars = { d6Value: req.cookies['d6_value'] }
   res.render('index.ejs', templateVars)
 })
 
