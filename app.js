@@ -30,18 +30,6 @@ app.post('/', (req, res) => {
   const templateVars = { d6Value: req.cookies['d6_value'] }
   res.render('index.ejs', templateVars)
 })
-<<<<<<< HEAD
-// app.post('/new_d6', (req, res) => {
-//   const newD6 = Math.floor(Math.random()*6 + 1)
-//   res.cookie('d6_value', newD6)
-//   res.redirect('/')
-// })
-
-// app.post('/reset_d6', (req, res) => {
-//   res.cookie('d6_value', '0')
-//   res.redirect('/')
-// })
-=======
 
 app.post('/new_d6', (req, res) => {
   const newD6 = Math.floor(Math.random()*6 + 1)
@@ -53,7 +41,6 @@ app.post('/reset_d6', (req, res) => {
   res.cookie('d6-value', '0')
   res.redirect('/')
 })
->>>>>>> main
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
